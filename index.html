@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo da Nail Art - Blog</title>
+    <style>
+        header {
+            background-color: #FF69B4;
+            color: #000000;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        main {
+            background-color: #000000;
+            color: #FF69B4;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px; 
+        }
+
+        article {
+            display: flex;
+       }
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+        }
+
+     </style>
+</head>
+
+<body>
+    <header>
+        <h1>Universo da Nail Art</h1>
+        <p>Vou compartilhar conhecimentos sobre cuidados, tendências e design de unhas</p>
+    </header>
+    <main>
+        <article>
+            <img src="Unhas.png"
+                alt="Logotipo circular estilizado em rosa e preto do Universo da Nail Art, mostrando uma mão elegante com unhas longas e decoradas, cercada por vidros de esmalte e brilhos.">
+            <div>
+                <h2>Bem-Vindos ao Universo da Nail Art! 💅✨</h2>
+                <p class="artigo-autor">Por: Maria Eduarda Godoy</p>
+                <p>Fala, galera! Sejam muito bem-vindos ao meu espaço! Todos me chamam de Duda, e criei o Universo da Nail Art — com essa vibe estilosa em rosa e preto — para ser o nosso ponto de encontro oficial para falar sobre unhas de um jeito leve, sincero e sem enrolação. Por aqui, vou soltar as melhores indicações, comentar os lançamentos de esmaltes da temporada e falar a real sobre o que vale ou não a pena testar!</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="Unhas.png"
+                alt="Logotipo circular estilizado em rosa e preto do Universo da Nail Art, mostrando uma mão elegante com unhas longas e decoradas, cercada por vidros de esmalte e brilhos.">
+            <div>
+                <h2>Formatos de Unha e Estilo: Qual combina com você? 🎀🖤</h2>
+                <p class="artigo-autor">Por: Maria Eduarda Godoy</p>
+                <p>Vocês já pararam para pensar que escolher o formato ideal para a sua unha é quase como definir a sua própria identidade visual? Seja quadrada, redonda, stiletto ou amendoada, cada escolha exige técnica, lixamento preciso e muita criatividade! No próximo post, vou listar os formatos que mais estão em alta na temporada e dar dicas de designs que combinam com cada um deles para deixar suas mãos incríveis. Fiquem ligadas!</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+</body>
+
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else{
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    });
+</script>
+
+</html>
